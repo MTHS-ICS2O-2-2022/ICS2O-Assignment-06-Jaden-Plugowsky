@@ -1,7 +1,7 @@
 // Copyright (c) 2023 Jaden Plugowsky All rights reserved
 //
 // Created by: Jaden Plugowsky
-// Created on: April 2023
+// Created on: June 2023
 // This file contains the JS functions for index.html
 
 "use strict"
@@ -12,6 +12,7 @@
 // code from: https://www.youtube.com/watch?v=670f71LTWpM
 
 const getImage = async (URLAddress) => {
+  // This takes an image from an API website, then placing the image on my website
   try {
     const result = await fetch(URLAddress)
     const jsonData = await result.json()
