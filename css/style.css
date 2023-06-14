@@ -15,20 +15,14 @@ body {
 }
 
 a {
-  font-size: 30px;
+  font-size: 25px;
   background-color: white;
-  padding-left: 20px;
-}
-
-.right-image {
-  height: auto;
-  width: 450px;
-  float: right;
-  margin-right: 150px;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .mdl-content {
-  font-size: 30px;
+  font-size: 35px;
   line-height: 30px;
 }
 
@@ -46,7 +40,7 @@ a {
 }
 
 .page-content-answer {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #button-one {

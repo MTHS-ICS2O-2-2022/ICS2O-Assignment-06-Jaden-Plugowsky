@@ -4,17 +4,29 @@
 // Created on: April 2023
 // This file contains the JS functions for index.html
 
-"use strict";
+"use strict"
 
-function buttonOneClicked() {
-  //This function does XXXX
-  //Input through Textfields
-  const example = parseFloat(document.getElementById("example").value)
+/**
+ * Get API info.
+ */
+// code from: https://www.youtube.com/watch?v=670f71LTWpM
 
-  //Process
-  const answer = example
-
-  //Output
-  document.getElementById("answer").innerHTML =
-    "The answer is: " + answer.toFixed(2)
+const getImage = async (URLAddress) => {
+  try {
+    const result = await fetch(URLAddress)
+    const jsonData = await result.json()
+    console.log(jsonData)
+    document.getElementById("api-image").innerHTML =
+      '<img src="' + jsonData.image + '" alt="API fox image">'
+    document.getElementById("link").innerHTML =
+      '<a href="' + jsonData.link + '">Link to image<a/>'
+  } catch (err) {
+    console.log(err)
+    document.getElementById("link").innerHTML = "Error"
+  }
 }
+
+getImage("https://randomfox.ca/floof/")
+
+// '<img src="' + jsonData.url + '" alt="API image">'    api-image    (template for image APIs)
+// "<div>" + jsonData.slip.advice + "<div/>"    answer    (template for text APIs)
